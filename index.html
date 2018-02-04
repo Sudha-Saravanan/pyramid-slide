@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pyramid Slide</title>
+    <style>
+        #pyramid {
+            line-height: 0;
+            font-size: 30px;
+            font-weight: bold;
+            color: brown;
+
+        }
+
+        body {
+            font-family: "Courier New", monospace;
+            text-align: center;
+            margin: 35px;
+            background-color: antiquewhite;
+            padding: 10px;
+            border: 1px solid #4caf50;
+            border-radius: 25px;
+        }
+    </style>
+</head>
+<body >
+    <div>
+        <table style="width: 100%">
+            <tr bgcolor="#FF0000">
+                <td>
+                    <lable> Brick Symbol:</lable>
+                    <select id="brickpyramid" name="brickpyramid" onchange="myFunction()">
+                        <option value="@">@</option>
+                        <option value="#">#</option>
+                        <option value="$">$</option>
+                        <option value="%">%</option>
+                    </select>
+                </td>
+                <td>
+                    <lable>How high?</lable>
+                    <input type="range" id="pyramidHeight" name="pyramidHeight" min="1" max="20" value="8" oninput="myFunction()">
+                    <span id="slider"></span>
+                </td>
+            </tr>    
+        </table>
+    </div>
+        
+    <div>
+        <table>
+            <tr colspan="2">
+                <p id="pyramid"></p> 
+            </tr>
+        </table>
+    </div>    
+</body>
+<script src="pyramidSlide.js"></script>
+</html>
